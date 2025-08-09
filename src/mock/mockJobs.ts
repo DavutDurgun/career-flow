@@ -1,0 +1,261 @@
+import type { Job } from "@/types/job";
+
+export const mockJobs: Job[] = [
+  {
+    id: "1",
+    title: "Senior Frontend Developer",
+    company: "TechCorp",
+    location: "İstanbul",
+    category: "Yazılım Geliştirme",
+    type: "Tam Zamanlı",
+    salary: {
+      min: 110000,
+      max: 130000,
+      currency: "TL",
+    },
+    description:
+      "Modern web uygulamaları geliştiren deneyimli frontend developer arıyoruz.",
+    requirements: [
+      "5+ yıl frontend geliştirme deneyimi",
+      "Vue.js, React veya Angular uzmanlığı",
+      "TypeScript bilgisi",
+      "CSS preprocessor deneyimi",
+    ],
+    responsibilities: [
+      "Web uygulamalarının frontend kısmını geliştirmek",
+      "UI/UX tasarımlarını kodla hayata geçirmek",
+      "Performance optimizasyonu yapmak",
+      "Code review süreçlerine katılmak",
+    ],
+    benefits: [
+      "Esnek çalışma saatleri",
+      "Remote çalışma imkanı",
+      "Eğitim ve gelişim desteği",
+      "Sağlık sigortası",
+    ],
+    postedDate: "2024-01-15",
+    deadline: "2024-02-15",
+    remote: true,
+    experienceLevel: "Kıdemli",
+  },
+  {
+    id: "2",
+    title: "UI/UX Designer",
+    company: "DesignStudio",
+    location: "Ankara",
+    category: "Tasarım",
+    type: "Tam Zamanlı",
+    salary: {
+      min: 70000,
+      max: 90000,
+      currency: "TL",
+    },
+    description:
+      "Kullanıcı deneyimi odaklı, yaratıcı tasarımlar yapan designer arıyoruz.",
+    requirements: [
+      "3+ yıl UI/UX tasarım deneyimi",
+      "Figma, Sketch, Adobe XD uzmanlığı",
+      "Prototyping deneyimi",
+      "Kullanıcı araştırması bilgisi",
+    ],
+    responsibilities: [
+      "Kullanıcı araştırması yapmak",
+      "Wireframe ve prototype oluşturmak",
+      "Visual tasarımları hazırlamak",
+      "Developer'larla işbirliği yapmak",
+    ],
+    benefits: [
+      "Kreatif çalışma ortamı",
+      "Tasarım konferansları",
+      "Adobe Creative Suite lisansı",
+      "Yemek kartı",
+    ],
+    postedDate: "2024-01-10",
+    deadline: "2024-02-10",
+    remote: false,
+    experienceLevel: "Orta Seviye",
+  },
+  {
+    id: "3",
+    title: "Digital Marketing Specialist",
+    company: "MarketingPro",
+    location: "İzmir",
+    category: "Pazarlama",
+    type: "Tam Zamanlı",
+    salary: {
+      min: 40000,
+      max: 60000,
+      currency: "TL",
+    },
+    description: "Dijital pazarlama stratejileri geliştiren uzman arıyoruz.",
+    requirements: [
+      "2+ yıl dijital pazarlama deneyimi",
+      "Google Ads, Facebook Ads bilgisi",
+      "SEO/SEM uzmanlığı",
+      "Analytics tools deneyimi",
+    ],
+    responsibilities: [
+      "Dijital kampanyalar yönetmek",
+      "Social media stratejileri geliştirmek",
+      "Performance analizi yapmak",
+      "Content marketing planlamak",
+    ],
+    benefits: [
+      "Performance bonusu",
+      "Esnek çalışma",
+      "Eğitim desteği",
+      "Ulaşım desteği",
+    ],
+    postedDate: "2024-01-12",
+    deadline: "2024-02-12",
+    remote: true,
+    experienceLevel: "Orta Seviye",
+  },
+  {
+    id: "4",
+    title: "Backend Developer",
+    company: "CodeBase",
+    location: "İstanbul",
+    category: "Yazılım Geliştirme",
+    type: "Tam Zamanlı",
+    salary: {
+      min: 80000,
+      max: 100000,
+      currency: "TL",
+    },
+    description: "Scalable backend sistemleri geliştiren developer arıyoruz.",
+    requirements: [
+      "4+ yıl backend geliştirme deneyimi",
+      "Node.js, Python veya Java uzmanlığı",
+      "Database tasarımı bilgisi",
+      "API geliştirme deneyimi",
+    ],
+    responsibilities: [
+      "Backend API'leri geliştirmek",
+      "Database optimizasyonu yapmak",
+      "Sistem mimarisini tasarlamak",
+      "Security best practices uygulamak",
+    ],
+    benefits: [
+      "Teknik eğitimler",
+      "Conference katılım desteği",
+      "Remote working",
+      "Stock option",
+    ],
+    postedDate: "2024-01-08",
+    deadline: "2024-02-08",
+    remote: true,
+    experienceLevel: "Kıdemli",
+  },
+  {
+    id: "5",
+    title: "Junior Frontend Developer",
+    company: "StartupTech",
+    location: "Bursa",
+    category: "Yazılım Geliştirme",
+    type: "Tam Zamanlı",
+    salary: {
+      min: 40000,
+      max: 70000,
+      currency: "TL",
+    },
+    description:
+      "Kariyerine yeni başlayan, öğrenmeye açık frontend developer arıyoruz.",
+    requirements: [
+      "1+ yıl frontend geliştirme deneyimi",
+      "HTML, CSS, JavaScript bilgisi",
+      "Vue.js veya React temel bilgisi",
+      "Git kullanımı",
+    ],
+    responsibilities: [
+      "Web arayüzleri geliştirmek",
+      "Bug fix ve improvement yapmak",
+      "Senior developer'lardan öğrenmek",
+      "Code review süreçlerine katılmak",
+    ],
+    benefits: [
+      "Mentorship programı",
+      "Eğitim ve gelişim fırsatları",
+      "Genç ve dinamik takım",
+      "Yemek kartı",
+    ],
+    postedDate: "2024-01-14",
+    deadline: "2024-02-14",
+    remote: false,
+    experienceLevel: "Giriş Seviyesi",
+  },
+  {
+    id: "6",
+    title: "Product Manager",
+    company: "InnovateNow",
+    location: "İstanbul",
+    category: "Operasyon",
+    type: "Tam Zamanlı",
+    salary: {
+      min: 30000,
+      max: 45000,
+      currency: "TL",
+    },
+    description:
+      "Ürün stratejileri belirleyen ve geliştirme süreçlerini yöneten product manager arıyoruz.",
+    requirements: [
+      "5+ yıl product management deneyimi",
+      "Agile/Scrum metodolojileri bilgisi",
+      "Data analysis skills",
+      "Stakeholder management",
+    ],
+    responsibilities: [
+      "Ürün roadmap'i oluşturmak",
+      "Feature önceliklerini belirlemek",
+      "Cross-functional takımlarla çalışmak",
+      "Market araştırması yapmak",
+    ],
+    benefits: [
+      "Yüksek maaş paketi",
+      "Equity participation",
+      "Leadership training",
+      "Flexible working hours",
+    ],
+    postedDate: "2024-01-05",
+    deadline: "2024-02-05",
+    remote: true,
+    experienceLevel: "Uzman",
+  },
+];
+
+// Kategoriler ve lokasyonlar için yardımcı arrays
+export const jobCategories = [
+  "Yazılım Geliştirme",
+  "Tasarım",
+  "Pazarlama",
+  "Satış",
+  "İnsan Kaynakları",
+  "Finans",
+  "Operasyon",
+  "Müşteri Hizmetleri",
+] as const;
+
+export const jobTypes = [
+  "Tam Zamanlı",
+  "Yarı Zamanlı",
+  "Freelance",
+  "Staj",
+  "Sözleşmeli",
+] as const;
+
+export const experienceLevels = [
+  "Giriş Seviyesi",
+  "Orta Seviye",
+  "Kıdemli",
+  "Uzman",
+] as const;
+
+export const locations = [
+  "İstanbul",
+  "Ankara",
+  "İzmir",
+  "Bursa",
+  "Antalya",
+  "Adana",
+  "Konya",
+] as const;
