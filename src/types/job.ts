@@ -50,3 +50,24 @@ export interface JobFilters {
 }
 
 export type RemoteFilterType = "all" | "remote" | "office";
+
+export interface JobApplication {
+  id: string;
+  jobId: string;
+  applicantName: string;
+  applicantEmail: string;
+  applicantPhone: string;
+  coverLetter: string;
+  cvFileName: string;
+  cvFileUrl: string;
+  appliedDate: string;
+  status: "pending" | "reviewed" | "accepted" | "rejected";
+}
+
+export interface ApplicationData {
+  fullName: string;
+  email: string;
+  phone: string;
+  coverLetter: string;
+  cv: File | null;
+}

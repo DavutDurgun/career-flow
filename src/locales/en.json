@@ -4,12 +4,14 @@
     "jobs": "Jobs",
     "about": "About"
   },
-
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
-    "retry": "Try Again",
+    "retry": "Retry",
     "clear": "Clear",
+    "close": "Close",
+    "cancel": "Cancel",
+    "goBack": "Go Back",
     "deadline": {
       "expired": "Expired",
       "today": "Today",
@@ -17,16 +19,14 @@
       "daysLeft": "{days} days left"
     }
   },
-
   "jobs": {
     "title": "Job Listings",
     "found": "jobs found",
     "filtered": "(filtered)",
     "noResults": "No Jobs Found",
-    "noResultsDesc": "No jobs match your search criteria.",
+    "noResultsDesc": "No job listings match your search criteria.",
     "clearFilters": "Clear Filters"
   },
-
   "filter": {
     "search": "Search",
     "searchPlaceholder": "Job title, company name...",
@@ -45,16 +45,32 @@
     "activeFilters": "Active Filters",
     "clearAll": "Clear All"
   },
-
   "job": {
     "perMonth": "/ Month",
     "requirements": "Requirements:",
     "more": "more...",
-    "postedOn": "Posted on:",
+    "postedOn": "Posted:",
     "deadline": "Deadline:",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "backToJobs": "Back to Jobs",
+    "postedDate": "Posted Date",
+    "remainingDays": "Remaining Days",
+    "day": "day",
+    "days": "days",
+    "jobId": "Job ID",
+    "description": "Job Description",
+    "benefits": "Benefits",
+    "quickActions": "Quick Actions",
+    "applyNow": "Apply Now",
+    "applicationClosed": "Application Closed",
+    "similarJobs": "Similar Jobs",
+    "companyInfo": "Company Info",
+    "company": "Company",
+    "location": "Location",
+    "workType": "Work Type",
+    "remoteWork": "Remote Work",
+    "officeWork": "Office"
   },
-
   "category": {
     "software": "Software Development",
     "design": "Design",
@@ -65,19 +81,50 @@
     "operations": "Operations",
     "support": "Customer Support"
   },
-
   "type": {
-    "fullTime": "Full-time",
-    "partTime": "Part-time",
+    "fullTime": "Full-Time",
+    "partTime": "Part-Time",
     "freelance": "Freelance",
     "internship": "Internship",
     "contract": "Contract"
   },
-
   "exp": {
     "entry": "Entry Level",
     "mid": "Mid Level",
     "senior": "Senior",
     "expert": "Expert"
+  },
+  "application": {
+    "title": "Job Application",
+    "success": {
+      "title": "Application submitted successfully!",
+      "message": "Thank you for your interest. We will contact you when our evaluation process is complete."
+    },
+    "errors": {
+      "nameRequired": "Full name is required.",
+      "emailRequired": "Email address is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "phoneRequired": "Phone number is required.",
+      "coverLetterRequired": "Cover letter is required.",
+      "cvRequired": "CV upload is required.",
+      "invalidFileType": "You can only upload files in PDF, DOC, or DOCX format.",
+      "fileTooLarge": "File size cannot exceed 5MB.",
+      "submitFailed": "An error occurred while submitting the application. Please try again."
+    },
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "E.g. Davut Durgun",
+    "email": "Email Address",
+    "emailPlaceholder": "E.g. davut.durgun[at]email.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "E.g. 555-123-4567",
+    "coverLetter": "Cover Letter",
+    "coverLetterPlaceholder": "Explain your interest in the position and why you are a good fit.",
+    "characters": "characters",
+    "cv": "CV",
+    "uploadFile": "Upload a file",
+    "orDragAndDrop": "or drag and drop",
+    "upTo": "up to",
+    "submit": "Submit",
+    "submitting": "Submitting..."
   }
 }

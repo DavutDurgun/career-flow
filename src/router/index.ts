@@ -21,7 +21,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/jobs/:id",
     name: "JobDetail",
-    component: { template: '<div class="p-4">JobDetailView  Sayfası</div>' },
+    component: () => import("@/views/JobDetailView.vue"),
     props: true,
     meta: {
       title: "İş Detayı - CareerFlow",

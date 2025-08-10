@@ -4,12 +4,14 @@
     "jobs": "İş İlanları",
     "about": "Hakkımızda"
   },
-
   "common": {
     "loading": "Yükleniyor...",
     "error": "Bir hata oluştu",
     "retry": "Tekrar Dene",
     "clear": "Temizle",
+    "close": "Kapat",
+    "cancel": "İptal",
+    "goBack": "Geri Dön",
     "deadline": {
       "expired": "Süresi Doldu",
       "today": "Bugün",
@@ -17,7 +19,6 @@
       "daysLeft": "{days} gün kaldı"
     }
   },
-
   "jobs": {
     "title": "İş İlanları",
     "found": "iş ilanı bulundu",
@@ -26,7 +27,6 @@
     "noResultsDesc": "Arama kriterlerinize uygun iş ilanı bulunmamaktadır.",
     "clearFilters": "Filtreleri Temizle"
   },
-
   "filter": {
     "search": "Arama",
     "searchPlaceholder": "İş başlığı, şirket adı...",
@@ -45,16 +45,32 @@
     "activeFilters": "Aktif Filtreler",
     "clearAll": "Tümünü Temizle"
   },
-
   "job": {
     "perMonth": "/ Ay",
     "requirements": "Aranan Nitelikler:",
     "more": "daha...",
     "postedOn": "Yayınlanma:",
     "deadline": "Son başvuru:",
-    "viewDetails": "Detayları Gör"
+    "viewDetails": "Detayları Gör",
+    "backToJobs": "İş İlanlarına Geri Dön",
+    "postedDate": "Yayınlanma Tarihi",
+    "remainingDays": "Kalan Gün",
+    "day": "gün",
+    "days": "gün",
+    "jobId": "İlan Kodu",
+    "description": "İş Tanımı",
+    "benefits": "Avantajlar",
+    "quickActions": "Hızlı İşlemler",
+    "applyNow": "Başvur",
+    "applicationClosed": "Başvuru Kapandı",
+    "similarJobs": "Benzer İş İlanları",
+    "companyInfo": "Şirket Bilgileri",
+    "company": "Şirket",
+    "location": "Lokasyon",
+    "workType": "Çalışma Şekli",
+    "remoteWork": "Uzaktan Çalışma",
+    "officeWork": "Ofis"
   },
-
   "category": {
     "software": "Yazılım Geliştirme",
     "design": "Tasarım",
@@ -65,7 +81,6 @@
     "operations": "Operasyon",
     "support": "Müşteri Hizmetleri"
   },
-
   "type": {
     "fullTime": "Tam Zamanlı",
     "partTime": "Yarı Zamanlı",
@@ -73,11 +88,43 @@
     "internship": "Staj",
     "contract": "Sözleşmeli"
   },
-
   "exp": {
     "entry": "Giriş Seviyesi",
     "mid": "Orta Seviye",
     "senior": "Kıdemli",
     "expert": "Uzman"
+  },
+  "application": {
+    "title": "İş Başvurusu",
+    "success": {
+      "title": "Başvurunuz başarıyla gönderildi!",
+      "message": "İlginiz için teşekkür ederiz. Değerlendirme sürecimiz tamamlandığında sizinle iletişime geçeceğiz."
+    },
+    "errors": {
+      "nameRequired": "Ad soyad zorunludur.",
+      "emailRequired": "E-posta adresi zorunludur.",
+      "emailInvalid": "Geçerli bir e-posta adresi girin.",
+      "phoneRequired": "Telefon numarası zorunludur.",
+      "coverLetterRequired": "Ön yazı zorunludur.",
+      "cvRequired": "Özgeçmiş yüklemek zorunludur.",
+      "invalidFileType": "Sadece PDF, DOC veya DOCX formatında dosya yükleyebilirsiniz.",
+      "fileTooLarge": "Dosya boyutu 5MB'ı geçemez.",
+      "submitFailed": "Başvuru gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "fullName": "Adınız Soyadınız",
+    "fullNamePlaceholder": "Örn. Davut Durgun",
+    "email": "E-posta Adresi",
+    "emailPlaceholder": "Örn. davut.durgun[at]email.com",
+    "phone": "Telefon Numarası",
+    "phonePlaceholder": "Örn. 555-123-4567",
+    "coverLetter": "Ön Yazı",
+    "coverLetterPlaceholder": "Pozisyona olan ilginizi ve neden bu pozisyona uygun olduğunuzu açıklayın.",
+    "characters": "karakter",
+    "cv": "Özgeçmiş",
+    "uploadFile": "Dosya yükle",
+    "orDragAndDrop": "veya sürükleyip bırakın",
+    "upTo": "boyutuna kadar",
+    "submit": "Gönder",
+    "submitting": "Gönderiliyor..."
   }
 }
