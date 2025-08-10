@@ -22,27 +22,23 @@ export interface Job {
 }
 
 export type JobCategory =
-  | "Yazılım Geliştirme"
-  | "Tasarım"
-  | "Pazarlama"
-  | "Satış"
-  | "İnsan Kaynakları"
-  | "Finans"
-  | "Operasyon"
-  | "Müşteri Hizmetleri";
+  | "software"
+  | "design"
+  | "marketing"
+  | "sales"
+  | "hr"
+  | "finance"
+  | "operations"
+  | "support";
 
 export type JobType =
-  | "Tam Zamanlı"
-  | "Yarı Zamanlı"
-  | "Freelance"
-  | "Staj"
-  | "Sözleşmeli";
+  | "fullTime"
+  | "partTime"
+  | "freelance"
+  | "internship"
+  | "contract";
 
-export type ExperienceLevel =
-  | "Giriş Seviyesi"
-  | "Orta Seviye"
-  | "Kıdemli"
-  | "Uzman";
+export type ExperienceLevel = "entry" | "mid" | "senior" | "expert";
 
 export interface JobFilters {
   search: string;
@@ -52,3 +48,5 @@ export interface JobFilters {
   remote: boolean | null;
   experienceLevel: ExperienceLevel | "";
 }
+
+export type RemoteFilterType = "all" | "remote" | "office";

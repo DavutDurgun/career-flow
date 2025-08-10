@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "jobs": "Jobs",
+    "about": "About"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "clear": "Clear",
+    "deadline": {
+      "expired": "Expired",
+      "today": "Today",
+      "oneDayLeft": "1 day left",
+      "daysLeft": "{days} days left"
+    }
+  },
+
+  "jobs": {
+    "title": "Job Listings",
+    "found": "jobs found",
+    "filtered": "(filtered)",
+    "noResults": "No Jobs Found",
+    "noResultsDesc": "No jobs match your search criteria.",
+    "clearFilters": "Clear Filters"
+  },
+
+  "filter": {
+    "search": "Search",
+    "searchPlaceholder": "Job title, company name...",
+    "location": "Location",
+    "allLocations": "All Locations",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "jobType": "Job Type",
+    "allTypes": "All Types",
+    "experienceLevel": "Experience Level",
+    "allLevels": "All Levels",
+    "remote": "Remote Work",
+    "all": "All",
+    "remoteOnly": "Remote",
+    "officeOnly": "Office",
+    "activeFilters": "Active Filters",
+    "clearAll": "Clear All"
+  },
+
+  "job": {
+    "perMonth": "/ Month",
+    "requirements": "Requirements:",
+    "more": "more...",
+    "postedOn": "Posted on:",
+    "deadline": "Deadline:",
+    "viewDetails": "View Details"
+  },
+
+  "category": {
+    "software": "Software Development",
+    "design": "Design",
+    "marketing": "Marketing",
+    "sales": "Sales",
+    "hr": "Human Resources",
+    "finance": "Finance",
+    "operations": "Operations",
+    "support": "Customer Support"
+  },
+
+  "type": {
+    "fullTime": "Full-time",
+    "partTime": "Part-time",
+    "freelance": "Freelance",
+    "internship": "Internship",
+    "contract": "Contract"
+  },
+
+  "exp": {
+    "entry": "Entry Level",
+    "mid": "Mid Level",
+    "senior": "Senior",
+    "expert": "Expert"
+  }
+}

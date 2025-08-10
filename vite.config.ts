@@ -12,4 +12,18 @@ export default defineConfig({
       vue: "vue/dist/vue.esm-bundler.js", // Bu satırı ekledik
     },
   },
+  css: {
+    postcss: {
+      plugins: [
+        require("tailwindcss")({
+          content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+          darkMode: "class",
+          theme: {
+            extend: {},
+          },
+          plugins: [],
+        }),
+      ],
+    },
+  },
 });

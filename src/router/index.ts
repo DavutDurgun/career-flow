@@ -13,7 +13,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/jobs",
     name: "Jobs",
-    component: { template: '<div class="p-4">JobsView  Sayfası</div>' },
+    component: () => import("@/views/JobsView.vue"),
     meta: {
       title: "İş İlanları - CareerFlow",
     },

@@ -1,9 +1,12 @@
 import { defineStore } from "pinia";
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
+import { useI18n } from "vue-i18n";
 import type { Job, JobFilters } from "@/types/job";
-import { mockJobs } from "@/mock/mockJobs";
+import { getLocalizedJobs } from "@/mock/mockJobs";
 
 export const useJobsStore = defineStore("jobs", () => {
+  const { locale } = useI18n();
+
   // State
   const jobs = ref<Job[]>([]);
   const loading = ref(false);
@@ -78,13 +81,19 @@ export const useJobsStore = defineStore("jobs", () => {
       // Simulate API call delay
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      jobs.value = mockJobs;
+      // Mevcut dile göre localized job'ları getir
+      jobs.value = getLocalizedJobs(locale.value as "tr" | "en");
     } catch (err) {
       error.value = "İş ilanları yüklenirken bir hata oluştu";
       console.error("Error fetching jobs:", err);
     } finally {
       loading.value = false;
     }
+  };
+
+  const refreshJobsForLocale = () => {
+    // Dil değiştiğinde job'ları yeniden yükle
+    jobs.value = getLocalizedJobs(locale.value as "tr" | "en");
   };
 
   const getJobById = (id: string): Job | undefined => {
@@ -110,6 +119,11 @@ export const useJobsStore = defineStore("jobs", () => {
     filters.value.search = searchTerm;
   };
 
+  // Dil değiştiğinde job'ları yeniden yükle
+  watch(locale, () => {
+    refreshJobsForLocale();
+  });
+
   return {
     // State
     jobs,
@@ -124,6 +138,7 @@ export const useJobsStore = defineStore("jobs", () => {
 
     // Actions
     fetchJobs,
+    refreshJobsForLocale,
     getJobById,
     updateFilters,
     clearFilters,

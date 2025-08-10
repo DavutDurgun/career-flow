@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "jobs": "İş İlanları",
+    "about": "Hakkımızda"
+  },
+
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar Dene",
+    "clear": "Temizle",
+    "deadline": {
+      "expired": "Süresi Doldu",
+      "today": "Bugün",
+      "oneDayLeft": "1 gün kaldı",
+      "daysLeft": "{days} gün kaldı"
+    }
+  },
+
+  "jobs": {
+    "title": "İş İlanları",
+    "found": "iş ilanı bulundu",
+    "filtered": "(filtrelenmiş)",
+    "noResults": "İş İlanı Bulunamadı",
+    "noResultsDesc": "Arama kriterlerinize uygun iş ilanı bulunmamaktadır.",
+    "clearFilters": "Filtreleri Temizle"
+  },
+
+  "filter": {
+    "search": "Arama",
+    "searchPlaceholder": "İş başlığı, şirket adı...",
+    "location": "Lokasyon",
+    "allLocations": "Tüm Lokasyonlar",
+    "category": "Kategori",
+    "allCategories": "Tüm Kategoriler",
+    "jobType": "Çalışma Türü",
+    "allTypes": "Tüm Türler",
+    "experienceLevel": "Deneyim Seviyesi",
+    "allLevels": "Tüm Seviyeler",
+    "remote": "Uzaktan Çalışma",
+    "all": "Tümü",
+    "remoteOnly": "Remote",
+    "officeOnly": "Ofis",
+    "activeFilters": "Aktif Filtreler",
+    "clearAll": "Tümünü Temizle"
+  },
+
+  "job": {
+    "perMonth": "/ Ay",
+    "requirements": "Aranan Nitelikler:",
+    "more": "daha...",
+    "postedOn": "Yayınlanma:",
+    "deadline": "Son başvuru:",
+    "viewDetails": "Detayları Gör"
+  },
+
+  "category": {
+    "software": "Yazılım Geliştirme",
+    "design": "Tasarım",
+    "marketing": "Pazarlama",
+    "sales": "Satış",
+    "hr": "İnsan Kaynakları",
+    "finance": "Finans",
+    "operations": "Operasyon",
+    "support": "Müşteri Hizmetleri"
+  },
+
+  "type": {
+    "fullTime": "Tam Zamanlı",
+    "partTime": "Yarı Zamanlı",
+    "freelance": "Freelance",
+    "internship": "Staj",
+    "contract": "Sözleşmeli"
+  },
+
+  "exp": {
+    "entry": "Giriş Seviyesi",
+    "mid": "Orta Seviye",
+    "senior": "Kıdemli",
+    "expert": "Uzman"
+  }
+}
