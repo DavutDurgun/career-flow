@@ -6,6 +6,12 @@ Ek olarak **Tema Modu (Dark/Light)** ve **Çok Dilli Destek (Türkçe/İngilizce
 
 ---
 
+#### Demo / Canlı
+
+https://career-flow-ten.vercel.app/
+
+---
+
 ## 📌 Özellikler
 
 ### Temel Özellikler
