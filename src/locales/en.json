@@ -126,5 +126,58 @@
     "upTo": "up to",
     "submit": "Submit",
     "submitting": "Submitting..."
+  },
+  "app": {
+    "name": "CareerFlow"
+  },
+  "navigation": {
+    "jobs": "Jobs",
+    "about": "About",
+    "exploreJobs": "Explore Job Listings"
+  },
+  "theme": {
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "CareerFlow helps you take the next step in your career by bridging job seekers and employers.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To help both job seekers and employers achieve their goals by matching the highest quality job opportunities with the right candidates."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be Turkey's most reliable and innovative job search platform, supporting you at every stage of your career."
+    },
+    "whyUs": {
+      "title": "Why CareerFlow?"
+    },
+    "features": {
+      "quality": {
+        "title": "Quality Job Listings",
+        "description": "Current and quality job opportunities from verified companies"
+      },
+      "matching": {
+        "title": "Fast Matching",
+        "description": "Quickly find jobs that match your skills with advanced algorithms"
+      },
+      "userFriendly": {
+        "title": "User Friendly",
+        "description": "Easy job search experience with simple and modern interface"
+      }
+    },
+    "stats": {
+      "title": "CareerFlow by Numbers",
+      "activeJobs": "Active Job Listings",
+      "registeredUsers": "Registered Users",
+      "partnerCompanies": "Partner Companies",
+      "satisfactionRate": "Satisfaction Rate"
+    },
+    "cta": {
+      "title": "Shape Your Career",
+      "description": "Start today to reach your dream job",
+      "button": "Explore Job Listings"
+    }
   }
 }

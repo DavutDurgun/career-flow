@@ -1,11 +1,6 @@
 <template>
   <div class="jobs-page dark:bg-gray-900 min-h-screen transition-colors">
     <div class="container mx-auto px-4 py-8">
-      <!-- Language Switcher - Top Right -->
-      <div class="flex justify-end mb-6">
-        <LanguageSwitcher />
-      </div>
-
       <!-- Page Header -->
       <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">

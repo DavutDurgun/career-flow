@@ -1,44 +1,53 @@
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import type { RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    name: "Home",
-    component: { template: '<h1 class="p-4">HomeView  Sayfası</h1>' },
-    meta: {
-      title: "Ana Sayfa - CareerFlow",
-    },
+    component: DefaultLayout,
+    children: [
+      {
+        path: "",
+        name: "Home",
+        component: () => import("@/views/JobsView.vue"),
+        meta: {
+          title: "İş İlanları - CareerFlow",
+        },
+      },
+
+      {
+        path: "jobs",
+        name: "Jobs",
+        component: () => import("@/views/JobsView.vue"),
+        meta: {
+          title: "İş İlanları - CareerFlow",
+        },
+      },
+      {
+        path: "jobs/:id",
+        name: "JobDetail",
+        component: () => import("@/views/JobDetailView.vue"),
+        props: true,
+        meta: {
+          title: "İş Detayı - CareerFlow",
+        },
+      },
+      {
+        path: "about",
+        name: "About",
+        component: () => import("@/views/AboutView.vue"),
+        meta: {
+          title: "Hakkımızda - CareerFlow",
+        },
+      },
+    ],
   },
   {
-    path: "/jobs",
-    name: "Jobs",
-    component: () => import("@/views/JobsView.vue"),
-    meta: {
-      title: "İş İlanları - CareerFlow",
-    },
-  },
-  {
-    path: "/jobs/:id",
-    name: "JobDetail",
-    component: () => import("@/views/JobDetailView.vue"),
-    props: true,
-    meta: {
-      title: "İş Detayı - CareerFlow",
-    },
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: { template: '<div class="p-4">AboutView  Sayfası</div>' },
-    meta: {
-      title: "Hakkımızda - CareerFlow",
-    },
-  },
-  {
+    // 404 sayfası
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: { template: '<div class="p-4">NotFoundView  Sayfası</div>' },
+    component: { template: '<div class="p-4">NotFoundView Sayfası</div>' },
     meta: {
       title: "Sayfa Bulunamadı - CareerFlow",
     },

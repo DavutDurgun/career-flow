@@ -126,5 +126,58 @@
     "upTo": "boyutuna kadar",
     "submit": "Gönder",
     "submitting": "Gönderiliyor..."
+  },
+  "app": {
+    "name": "İş Portalı"
+  },
+  "navigation": {
+    "jobs": "İş İlanları",
+    "about": "Hakkımızda",
+    "exploreJobs": "İş İlanlarını İncele"
+  },
+  "theme": {
+    "darkMode": "Koyu Tema",
+    "lightMode": "Açık Tema"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "CareerFlow, iş arayanlar ve işverenler arasında köprü kurarak kariyerinizin bir sonraki adımını atmaya yardımcı olur.",
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "En kaliteli iş fırsatlarını doğru adaylarla buluşturarak, hem iş arayanların hem de işverenlerin hedeflerine ulaşmalarını sağlamak."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "description": "Türkiye'nin en güvenilir ve yenilikçi iş arama platformu olarak, kariyerinizin her aşamasında yanınızda olmak."
+    },
+    "whyUs": {
+      "title": "Neden CareerFlow?"
+    },
+    "features": {
+      "quality": {
+        "title": "Kaliteli İş İlanları",
+        "description": "Doğrulanmış şirketlerden gelen güncel ve kaliteli iş fırsatları"
+      },
+      "matching": {
+        "title": "Hızlı Eşleştirme",
+        "description": "Gelişmiş algoritma ile yeteneklerinize uygun işleri hızlıca bulun"
+      },
+      "userFriendly": {
+        "title": "Kullanıcı Dostu",
+        "description": "Basit ve modern arayüz ile kolay iş arama deneyimi"
+      }
+    },
+    "stats": {
+      "title": "Rakamlarla CareerFlow",
+      "activeJobs": "Aktif İş İlanı",
+      "registeredUsers": "Kayıtlı Kullanıcı",
+      "partnerCompanies": "Partner Şirket",
+      "satisfactionRate": "Memnuniyet Oranı"
+    },
+    "cta": {
+      "title": "Kariyerinize Yön Verin",
+      "description": "Hayalinizdeki işe ulaşmak için bugün başlayın",
+      "button": "İş İlanlarını İncele"
+    }
   }
 }

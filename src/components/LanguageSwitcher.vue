@@ -1,119 +1,91 @@
 <template>
-  <div class="relative inline-block text-left">
+  <div class="relative">
     <button
       @click="isOpen = !isOpen"
-      class="inline-flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md bg-white hover:bg-gray-50"
-      type="button"
-      aria-haspopup="true"
-      :aria-expanded="isOpen"
-      aria-controls="language-menu"
+      class="flex items-center space-x-1 px-3 py-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
     >
-      <span class="mr-2">{{ currentLocale.flag }}</span>
-      {{ currentLocale.name }}
-      <svg
-        class="-mr-1 ml-2 h-5 w-5"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z"
-          clip-rule="evenodd"
-        />
-      </svg>
+      <span class="text-sm font-medium">{{ currentLanguage.flag }}</span>
+      <span class="text-sm">{{ currentLanguage.code.toUpperCase() }}</span>
+      <ChevronDownIcon class="w-4 h-4" />
     </button>
 
     <div
       v-if="isOpen"
-      id="language-menu"
-      class="origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
-      role="menu"
-      aria-orientation="vertical"
-      tabindex="-1"
+      class="absolute right-0 mt-2 py-2 w-32 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50"
     >
-      <div class="py-1">
-        <button
-          v-for="lang in availableLocales"
-          :key="lang.code"
-          @click="changeLanguage(lang.code)"
-          :class="[
-            'flex items-center w-full px-4 py-2 text-sm',
-            locale === lang.code
-              ? 'bg-gray-100 font-semibold'
-              : 'text-gray-700 hover:bg-gray-50',
-          ]"
-          role="menuitem"
-          type="button"
-        >
-          <span class="mr-2">{{ lang.flag }}</span> {{ lang.name }}
-          <svg
-            v-if="locale === lang.code"
-            class="ml-auto h-4 w-4 text-blue-600"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-        </button>
-      </div>
+      <button
+        v-for="lang in availableLanguages"
+        :key="lang.code"
+        @click="changeLanguage(lang.code)"
+        class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+        :class="{
+          'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400':
+            locale === lang.code,
+        }"
+      >
+        <span class="mr-2">{{ lang.flag }}</span>
+        <span>{{ lang.name }}</span>
+      </button>
     </div>
-
-    <div
-      v-if="isOpen"
-      @click="isOpen = false"
-      class="fixed inset-0 z-40"
-      aria-hidden="true"
-    ></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useI18n } from "vue-i18n";
-import { availableLocales, type Locale } from "@/config/i18n";
+import { useLanguageManager } from "@/composables/useLanguage";
+import ChevronDownIcon from "@/components/icons/ChevronDownIcon.vue";
 
 const { locale } = useI18n();
-
+const { updateHtmlLang } = useLanguageManager();
 const isOpen = ref(false);
 
-const changeLanguage = (code: Locale) => {
-  locale.value = code;
-  localStorage.setItem("locale", code);
+interface Language {
+  code: string;
+  name: string;
+  flag: string;
+}
+
+const availableLanguages: Language[] = [
+  { code: "tr", name: "Türkçe", flag: "🇹🇷" },
+  { code: "en", name: "English", flag: "🇺🇸" },
+];
+
+const currentLanguage = computed(
+  () =>
+    availableLanguages.find((lang) => lang.code === locale.value) ||
+    availableLanguages[0]
+);
+
+const changeLanguage = (langCode: string) => {
+  locale.value = langCode;
+  updateHtmlLang(langCode);
+  localStorage.setItem("locale", langCode);
   isOpen.value = false;
 };
 
-const currentLocale = computed(() => {
-  return (
-    availableLocales.find((l) => l.code === locale.value) || availableLocales[0]
-  );
-});
-
-// Escape ile dropdown kapanması
-const onKeyDown = (e: KeyboardEvent) => {
-  if (e.key === "Escape") {
+// Sayfanın herhangi bir yerine tıklandığında dropdown'u kapat
+const closeDropdown = (event: Event) => {
+  if (!(event.target as Element).closest(".relative")) {
     isOpen.value = false;
   }
 };
 
 onMounted(() => {
-  // LocalStorage'dan dil ayarını yükle
-  const savedLocale = localStorage.getItem("locale") as Locale | null;
-  if (savedLocale && availableLocales.some((l) => l.code === savedLocale)) {
+  // Kaydedilen dili yükle
+  const savedLocale = localStorage.getItem("locale");
+  if (
+    savedLocale &&
+    availableLanguages.some((lang) => lang.code === savedLocale)
+  ) {
     locale.value = savedLocale;
+    updateHtmlLang(savedLocale);
   }
-  window.addEventListener("keydown", onKeyDown);
+
+  document.addEventListener("click", closeDropdown);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("keydown", onKeyDown);
+  document.removeEventListener("click", closeDropdown);
 });
 </script>

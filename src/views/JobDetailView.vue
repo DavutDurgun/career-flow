@@ -503,7 +503,7 @@ import { useJobDetail } from "@/composables/useJobDetail";
 import { useJobApplication } from "@/composables/useJobApplication";
 import { useJobTranslations } from "@/composables/useJobTranslations";
 import { useJobFormatting } from "@/composables/useJobFormatting";
-import JobApplicationModal from "@/components/jobs/JobApplicationModal.vue";
+import JobApplicationModal from "@/components/modal/JobApplicationModal.vue";
 
 const { t } = useI18n();
 
