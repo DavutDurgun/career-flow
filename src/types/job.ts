@@ -43,10 +43,10 @@ export type ExperienceLevel = "entry" | "mid" | "senior" | "expert";
 export interface JobFilters {
   search: string;
   location: string;
-  category: JobCategory | "";
-  type: JobType | "";
+  category: JobCategory | "" | string;
+  type: JobType | "" | string;
   remote: boolean | null;
-  experienceLevel: ExperienceLevel | "";
+  experienceLevel: ExperienceLevel | "" | string;
 }
 
 export type RemoteFilterType = "all" | "remote" | "office";

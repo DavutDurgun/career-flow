@@ -3,27 +3,13 @@ import vue from "@vitejs/plugin-vue";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "path";
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
-      vue: "vue/dist/vue.esm-bundler.js", // Bu satırı ekledik
-    },
-  },
-  css: {
-    postcss: {
-      plugins: [
-        require("tailwindcss")({
-          content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-          darkMode: "class",
-          theme: {
-            extend: {},
-          },
-          plugins: [],
-        }),
-      ],
+      vue: "vue/dist/vue.esm-bundler.js",
     },
   },
 });

@@ -93,28 +93,6 @@
             :job="formatJobForDisplay(job)"
           />
         </div>
-
-        <!-- Debug Info (sadece development'ta göster) -->
-        <div
-          v-if="isDevelopment"
-          class="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm"
-        >
-          <details>
-            <summary
-              class="cursor-pointer font-semibold text-gray-700 dark:text-gray-300 mb-2"
-            >
-              Debug Info (Current Locale: {{ locale }})
-            </summary>
-            <div class="mt-2 space-y-2 text-gray-600 dark:text-gray-400">
-              <p><strong>Total Jobs:</strong> {{ jobCount }}</p>
-              <p><strong>Filtered Jobs:</strong> {{ filteredJobCount }}</p>
-              <p>
-                <strong>Active Filters:</strong>
-                {{ JSON.stringify(filters, null, 2) }}
-              </p>
-            </div>
-          </details>
-        </div>
       </div>
     </div>
   </div>
@@ -127,7 +105,6 @@ import { useJobsStore } from "@/stores/useJobsStore";
 import { useLocalizedJobs } from "@/hooks/useLocalizedJobs";
 import JobFilters from "../components/jobs/JobFilters.vue";
 import JobCard from "../components/jobs/JobCard.vue";
-import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 
 const { t, locale } = useI18n();
 const jobsStore = useJobsStore();
@@ -137,7 +114,6 @@ const {
   filteredLocalizedJobs,
   loading,
   error,
-  jobCount,
   filteredJobCount,
   ensureJobsLoaded,
   formatJobForDisplay,
@@ -157,12 +133,6 @@ const hasActiveFilters = computed(() => {
   );
 });
 
-// Development mode check
-const isDevelopment = computed(() => {
-  return import.meta.env.DEV;
-});
-
-// Lifecycle
 onMounted(async () => {
   await ensureJobsLoaded();
 });
